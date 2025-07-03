@@ -3,6 +3,8 @@ FROM openjdk:17-jdk-alpine
 
 # Set working directory inside container
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
 # Copy Maven build output (make sure you've built your app)
 COPY target/*.jar app.jar
