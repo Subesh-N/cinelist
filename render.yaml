@@ -3,17 +3,17 @@ services:
     name: cinelist-backend
     env: java
     plan: free
+    rootDir: backend
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
       - key: JAVA_HOME
         value: /opt/render/project/.jdk
-    rootDir: backend
 
   - type: web
     name: cinelist-frontend
     env: node
     plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
     rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
