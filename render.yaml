@@ -3,7 +3,7 @@ services:
     name: cinelist-backend
     env: java
     plan: free
-    rootDir: backend
+    rootDir: .
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
