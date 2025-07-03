@@ -9,11 +9,3 @@ services:
     envVars:
       - key: JAVA_HOME
         value: /opt/render/project/.jdk
-
-  - type: web
-    name: cinelist-frontend
-    env: node
-    plan: free
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    startCommand: npm start
