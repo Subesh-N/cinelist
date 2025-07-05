@@ -49,4 +49,8 @@ public class MovieService {
     public List<Wmovies> getwatchedmovies() {
         return Wmve.findAll();
     }
+
+    public void removewatchedmove(int srno) {
+        Wmve.deleteById(srno);
+    }
 }

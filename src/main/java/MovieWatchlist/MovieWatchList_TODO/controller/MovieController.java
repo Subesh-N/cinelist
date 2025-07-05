@@ -42,4 +42,9 @@ public class MovieController {
         return movieservice.getwatchedmovies();
     }
 
+    @DeleteMapping("/deletewatchedmovies/{srno}")
+    public void deletewatchedmovies(@PathVariable int srno){
+        movieservice.removewatchedmove(srno);
+    }
+
 }
