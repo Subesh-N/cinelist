@@ -1,13 +1,19 @@
 package MovieWatchlist.MovieWatchList_TODO.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
 public class Movie {
     @Id
     private int Id;
+    @NotNull(message ="movie name cannot be null")
+    @Column(nullable = false)
     private String moviename;
+    @NotNull(message ="genre name cannot be null")
+    @Column(nullable = false)
     private String genre;
     private boolean watched;
 
